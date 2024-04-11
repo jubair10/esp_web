@@ -1,28 +1,110 @@
-async function fetchAdvice() {
-    try {
-        const response = await fetch('https://api.adviceslip.com/advice');
-        if (!response.ok) {
-            throw new Error('API request failed');
-        }
-        const data = await response.json();
-        return data.slip.advice; // Return the advice
-    } catch (error) {
-        console.error(error); // Example: Logging the error to the console
-        return null; // Return null in case of error
-    }
+function startUp() {
+  let tl = gsap.timeline();
+
+  tl.set(".t1, .t2, .t3, .t4, .t5, .t6, .t7", { opacity: 0 });
+
+  // Define the animation sequence
+  tl.to(".t1", {
+    opacity:1,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t1", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1") // Start the fade-out animation of ".t1" 1 second after it fades in
+  .from(".t2", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t2", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1") // Start the fade-out animation of ".t2" 1 second after it fades in
+  .from(".t3", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t3", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1")  
+  .from(".t4", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t4", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1")  
+  .from(".t5", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t5", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1")  
+  .from(".t6", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t6", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1")  
+  .from(".t7", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  })
+  .to(".t7", {
+    opacity: 0,
+    duration:0.8,
+    ease: Expo.easeInOut,
+  }, "+=1")  
+  .to("#first", {
+    width: 0,
+    delay: .8,
+    duration: 1.5,
+    ease: Expo.easeInOut,
+    x: -1000,
+  })
+    .from("header", {
+      height: 0,
+      duration: 1.5,
+      ease: Expo.easeInOut,
+      scale: 0,
+      delay: -1,
+    })
+    .from(".gridTable", {
+      height: 0,
+      duration: 2,
+      ease: Expo.easeInOut,
+      // y:-1000,
+      scale: 0,
+      delay: -1.5,
+    });
 }
 
-const adviceElement = document.querySelector('#advice');
-const btn = document.querySelector('#btn');
+// startUp();
 
-const btnImage = document.querySelector('#btn-image');
-console.log(btnImage)
-btn.addEventListener('click', async function() {
-	btnImage.style.transform = 'rotate(360deg)';
-    const data = await fetchAdvice(); // Fetch the advice asynchronously
-    if (data !== null) {
-		adviceElement.innerHTML = data; // Update the advice in the DOM
-    } else {
-		adviceElement.innerHTML = "Failed to fetch advice. Please try again later."; // Handle error case
-    }
-});
+
+Shery.mouseFollower();
+
+Shery.makeMagnet(".text-5xl, .btn, nav ul li span, .card" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });

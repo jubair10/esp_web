@@ -1,33 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Advice generator app</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-[var(--dark-blue)] w-screen">
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon.png"
+    />
+    <title>AURIXEON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#001219] w-screen text-[#ffffff] overflow-hidden">
+  <div id="first" class="h-screen w-screen bg-[#090c0e] flex justify-center items-center absolute -z-10">
+    <div class="showcase  w-full h-12 sm:h-16 lg:h-24 relative flex flex-col justify-center items-center ">
 
-<div class="h-screen flex justify-items-center items-center">
-  <div class="rounded-xl min-w-64 mx-12 md:w-14 sm:w-1/2 lg:w-1/4 lg:m-auto md:m-auto sm:m-auto min-h-40 bg-[var(--dark-grayish-blue)]  p-4 relative flex flex-col justify-center items-center max-w-[400px]">
-
-    <div class="text text-[var(--neon-green)] font-semibold text-center tracking-[0.15rem] text-[.7em] mt-2">ADVICE #117</div>
-    <div id="advice" class="text-[var(--light-cyan)] text-[28px] text-center font-semibold mt-4"><%- data.temparature %></div>
-    <img src="images/pattern-divider-desktop.svg" alt="pattern-divider" class="mt-2.5 mb-4">
-    <div class="bg-[var(--neon-green)] rounded-full  flex justify-center items-center -mb-10 p-5" id="btn">
-
-      <img src="images/icon-dice.svg" alt="dice" id="btn-image">
-      
+      <h1 class="t1 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute">Aurixeon</h1>
+      <h1 class="t2 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute">A Science Project</h1>
+      <h1 class="t3 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute text-center">combination of </h1>
+      <h1 class="t4 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute text-center">Web</h1>
+      <h1 class="t5 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute text-center">Ai</h1>
+      <h1 class="t6 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute text-center">Embed system</h1>
+      <h1 class="t7 text-5xl sm:text-6xl lg:text-8xl uppercase font-bold absolute text-center">MAde by Learning Warriors</h1>
     </div>
   </div>
-</div>
-  <script src="main.js"></script>
-  <script src="server.js"></script>
-</body>
+    <header>
+      <nav class="flex justify-center">
+        <ul
+          class="flex bg-[#0a9396] mix-blend-difference rounded-br-3xl rounded-bl-3xl p-4"
+        >
+          <li class="p-3 font-semibold border-r-1"><span>Informatiom</span></li>
+          <li class="p-3 font-semibold border-l-2"><span>Captured Photo</span></li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      class="gridTable h-5/6 sm:grid lg:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 sm:grid-cols-2 place-items-center gap-8 my-16 md:my-16 mx-20 lg:mx-60"
+    >
+      <div
+        id="fire"
+        class="card h-full w-fit rounded-2xl bg-[#123f4d] relative py-4"
+      >
+        <div class="flex items-center justify-between px-4">
+          <span class="text-[2.5em] font-semibold">Fire</span>
+          <img
+            src="./images/fire.png"
+            alt="fire-gif"
+            class="saturate-150 h-16 w-16 absolute right-3 -top-9"
+          />
+        </div>
+        <div class="px-4">
+          <span class="desc text-sm"
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque nulla fugiat numquam tempore molestiae iste itaque
+            explicabo, consequatur ad temporibus libero porro fuga impedit
+            voluptatibus in natus ipsum. Expedita accusantium hic temporibus
+            explicabo, placeat ipsam molestiae quaerat odio, perferendis
+            doloribus quasi assumenda sit dignissimos cum.</span
+          >
+          <div class="mt-3 flex justify-between items-center ">
+            <span class="btn text-xl font-medium text-white/80 bg-[#0f313173] rounded-3xl p-3 backdrop-blur-3xl">Learn More</span>
+            <img
+              src="images/arrow-90.png"
+              alt="learn-more"
+              class="btn h-9 w-9 mx-6 invert border-black rounded-full p-2 border-2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="gas" class="">2</div>
+      <div id="temparature" class="">3</div>
+      <div id="humidity" class="col-[-3/-2]">4</div> -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+    <script src="main.js"></script>
+    <script src="server.js"></script>
+  </body>
 </html>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #001219;
+}
+
 /* Colors */
 
 /* Primary */
@@ -18,22 +22,16 @@
 }
 
 * {
-  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
 }
 
-/* Add this CSS to your stylesheet */
-#btn {
-  transition: box-shadow 0.5s; /* Add a transition for smooth effect */
-}
 
-#btn:enabled {
-  box-shadow: 0 0 40px var(--neon-green); /* Apply the glow effect when hovered */
-}
-#btn:hover {
-  box-shadow: 0 0 40px var(--neon-green); /* Apply the glow effect when hovered */
-}
-
-#btn-image {
-  transition: all ease 0.5;
+.desc {
+  color: rgb(206, 201, 201);
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: clip;
 }
