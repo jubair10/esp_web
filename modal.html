@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <title>AURIXEON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#001219] w-screen text-[#ffffff] overflow-hidden">
+    <div
+      class="modal-container h-full w-full backdrop-brightness-50 fixed z-[100]  justify-center items-center flex"
+    >
+      <div class="modal bg-[#001219] h-4/6 w-3/5 rounded-3xl py-3 px-4">
+        <div class="modal-header flex items-center justify-around relative">
+            <span class="text-[2.5em] font-semibold tracking-wider">Fire</span>
+          <span class="modal-close text-4xl text-[#000000] font-light">&times;</span>
+        </div>
+        <div class="modal-content h-3/4 overflow-auto elem-scrollBar">
+          <div class="w-5/6 mx-auto rounded-lg shadow-md p-8 overflow-y-auto">
+            <h1 class="text-2xl font-semibold mb-4">Fire Safety Guide</h1>
+            <ol class="list-decimal list-inside">
+                <li class="mb-4">Stay Calm: In case of a fire, try to stay calm. Panic can impair your judgment.</li>
+                <li class="mb-4">Alert Others: If others are in the house, alert them immediately. Ensure everyone knows the quickest exit routes.</li>
+                <li class="mb-4">Exit Safely: Leave the building as quickly as possible. Crawl low under smoke if necessary; smoke rises, so the cleanest air will be near the ground.</li>
+                <li class="mb-4">Check Doors: Before opening any doors, use the back of your hand to touch the door and doorknob. If they're hot, don't open the door. Find another escape route.</li>
+                <li class="mb-4">Use Exit Routes: Use stairwells or designated exit routes. Elevators may not be safe during a fire.</li>
+                <li class="mb-4">Alert Authorities: Once outside, call emergency services immediately. Provide them with your address and inform them of any trapped individuals.</li>
+                <li class="mb-4">Stay Outside: Do not re-enter the building until authorities declare it safe to do so.</li>
+                <li class="mb-4">Account for Everyone: If someone is missing, inform the firefighters, but do not re-enter the building yourself.</li>
+                <li class="mb-4">Have a Meeting Point: Designate a safe meeting point outside the house where everyone can gather.</li>
+                <li class="mb-4">Don't Delay: Never underestimate the speed of a fire. Act quickly and decisively.</li>
+            </ol>
+        </div>
+        
+        </div>
+        <div class="modal-footer pt-3 text-center text-xs text-white/60 font-medium">&copy;Jubair</div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="flex justify-center">
+        <ul
+          class="flex bg-[#0a9396] mix-blend-difference rounded-br-3xl rounded-bl-3xl p-4"
+        >
+          <li class="p-3 font-semibold border-r-1"><span>Informatiom</span></li>
+          <li class="p-3 font-semibold border-l-2">
+            <span>Captured Photo</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      class="gridTable h-5/6 sm:grid lg:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 sm:grid-cols-2 place-items-center gap-8 my-16 md:my-16 mx-20 lg:mx-60"
+    >
+      <div
+        id="fire"
+        class="card h-full w-fit rounded-2xl bg-[#123f4d] relative py-4"
+      >
+        <div class="flex items-center justify-between px-4">
+          <span class="text-[2.5em] font-semibold">Fire</span>
+          <img
+            src="./images/fire.png"
+            alt="fire-gif"
+            class="saturate-150 h-16 w-16 absolute right-3 -top-9"
+          />
+        </div>
+        <div class="px-4">
+          <span class="desc text-sm"
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque nulla fugiat numquam tempore molestiae iste itaque
+            explicabo, consequatur ad temporibus libero porro fuga impedit
+            voluptatibus in natus ipsum. Expedita accusantium hic temporibus
+            explicabo, placeat ipsam molestiae quaerat odio, perferendis
+            doloribus quasi assumenda sit dignissimos cum.</span
+          >
+          <div class="mt-3 flex justify-between items-center">
+            <span
+              class="btn text-xl font-medium text-white/80 bg-[#0f313173] rounded-3xl p-3 backdrop-blur-3xl"
+              >Learn More</span
+            >
+            <img
+              src="images/arrow-90.png"
+              alt="learn-more"
+              class="btn h-9 w-9 mx-6 invert border-black rounded-full p-2 border-2" 
+              onclick="toogleDisplayModal()"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="gas" class="">2</div>
+      <div id="temparature" class="">3</div>
+      <div id="humidity" class="col-[-3/-2]">4</div> -->
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- Recommended -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <!-- Recommended -->
+    <script src="main.js"></script>
+    <script src="server.js"></script>
+  </body>
+</html>

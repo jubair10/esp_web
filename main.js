@@ -103,8 +103,15 @@ function startUp() {
 
 Shery.mouseFollower();
 
-Shery.makeMagnet(".text-5xl, .btn, nav ul li span, .card" /* Element to target.*/, {
+Shery.makeMagnet(".text-5xl, .btn, nav ul li span, .card, .modal, .modal-close" /* Element to target.*/, {
     //Parameters are optional.
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
+
+  function toggleDisplayModal() {
+    let modal = document.querySelector(".modal-container");
+    modal.classList.toggle("flex");
+    // modal.classList.toggle("hidden");
+  }
+  
